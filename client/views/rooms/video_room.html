@@ -1,0 +1,58 @@
+<template name="videoroom">
+
+	<div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{pathFor 'homepage'}}">Share A Stream</a>
+        </div>
+        <div class="navbar-collapse collapse">
+	    	<ul class="nav navbar-nav">
+	    		<li class="active"><a href="#">Home</a></li>
+	        	
+	      	</ul>
+	      
+		    <div class="navbar-form">
+            	<!-- <li><a id="toggle_search" href="#search">Search</a></li> -->
+            	
+				<div class="form-group">
+					<input class="form-control search_bar" placeholder="Search a video">
+					<div class="list-group" style="position:absolute;z-index:9999; max-height:300px;">
+		        	{{#if youtubeResults}}
+						{{#each youtubeResults}}        		
+		        			
+		        			<div class="contain">
+		        				<a class="select_video btn btn-info list-group-item" id="{{id.videoId}}" >
+	        						<img src="{{snippet.thumbnails.default.url}}">
+		        					<p class="list-group-item-text">{{snippet.title}}</p>
+		        				</a>
+		        			</div>
+		        		{{/each}}
+					{{/if}}		        		
+
+		       		</div>
+				</div>
+            	
+            </div>
+        </div>
+
+      </div>
+  	</div> 
+	<div class="container">
+		<div class="row">
+
+		</div>
+		
+		<div class="row videocontainer">
+			<div class="playerYT embed-responsive embed-responsive-16by9">
+			 	<iframe id="ytvideo" width="300" height="200" src="https://www.youtube.com/embed/zHIVeWhCMU8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+	</div>
+</template>

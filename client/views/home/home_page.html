@@ -1,0 +1,23 @@
+<template name="homepage">
+	<div class="container">
+	  <div class="jumbotron">
+        <h1>Create your room!</h1>
+        
+	        <form>
+	        	<div class="col-lg-12 input-group">
+	        		<input name="room_name" type="text" class="form-control" value="" placeholder="Room Name">
+        		</div>
+	        	<div class="col-lg-12 input-group">
+	        		<input name="video_link" type="text" class="form-control" value="" placeholder="Youtube Video Link">
+	        	</div>
+	        	<div>
+	        		<input type="submit" class="btn btn-success" value="Create Room">
+    	        </div>
+	        </form>
+        
+      </div>
+
+      {{> rooms_list}}
+
+    </div>
+</template>

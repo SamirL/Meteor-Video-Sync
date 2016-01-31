@@ -1,0 +1,26 @@
+<template name="rooms_list">
+
+      <div class="container">
+
+            <table class="table">
+                  <thead>
+                        <tr>
+                              <th>Name of the Room</th>
+                              <th>Link to the room</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        {{#each rooms}}
+                        <tr>
+                             <td> {{room_name}} </td>
+                             <td> <a href="{{pathFor 'videoroom'}}" class="btn btn-success">Access</a></td>
+                        </tr>
+                        
+                        {{/each}}
+                  </tbody>
+
+            </table>
+
+      </div>
+
+</template>

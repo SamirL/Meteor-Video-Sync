@@ -1,0 +1,8 @@
+Template.search.events({
+	
+	
+
+});
+
+
+
